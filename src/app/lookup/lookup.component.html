@@ -1,0 +1,5 @@
+<form [formGroup]="form">
+    <p>Search for gifs with a phrase</p>
+    <input type="text" formControlName="phrase">
+    <button (click)="processForm()" [disabled]="form.invalid">GO</button>
+</form>

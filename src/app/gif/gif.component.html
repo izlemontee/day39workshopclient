@@ -1,0 +1,21 @@
+<div *ngIf="gif">
+
+    <h2>Add a comment</h2>
+    <h3>{{gif.title}}</h3>
+    <img [src]="gif.url" alt="">
+    <button (click)="goToCommentForm()">Add a comment</button>
+    <table *ngIf="gif.comments.length>0">
+        <thead>
+            <tr>
+                <th>Comment</th>
+                <th>Posted On</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of gif.comments">
+                <td>{{c.comment}}</td>
+                <td>{{c.timestamp}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,10 @@
+<div *ngIf="results.length>0">
+    <table>
+        <tbody>
+            <tr *ngFor="let r of results">
+                <td (click)="onClick(r.id)"><img [src]="r.url" alt="" width="200"></td>
+                <td>{{r.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
